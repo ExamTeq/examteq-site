@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book 11+ Paper Class | ExamTeq</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>ExamTeq</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#subjects">Subjects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="book.html">Book Paper Class</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Book Your 11+ Paper Class</h2>
+      <p>Reserve your place below. You’ll receive a confirmation email after booking.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <form name="paper-class" method="POST" data-netlify="true">
+        <input type="text" name="parent-name" placeholder="Parent/Guardian Name" required>
+        <input type="email" name="email" placeholder="Parent Email" required>
+        <input type="text" name="child-name" placeholder="Child’s Name" required>
+        <label for="date">Select Paper Class Date:</label>
+        <select name="class-date" required>
+          <option value="">Choose a date</option>
+          <option value="2025-08-03">Sunday 3rd August</option>
+          <option value="2025-08-10">Sunday 10th August</option>
+          <option value="2025-08-17">Sunday 17th August</option>
+        </select>
+        <textarea name="notes" placeholder="Any notes or questions (optional)"></textarea>
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ExamTeq. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
