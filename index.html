@@ -1,69 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ExamTeq Tutoring</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="ExamTeq | Elite tutoring for 11+, KS2, and secondary school. Mock exams, topic tests, and free video lessons." />
+  <title>ExamTeq | Strive for Success</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>ExamTeq</h1>
-      <nav>
+  <!-- Navigation -->
+ <header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="logo.png" alt="ExamTeq Logo" style="height: 48px;">
+        <span style="font-weight: bold; font-size: 1.8rem; color: #0077cc;">ExamTeq</span>
+      </a>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="book.html">Book</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="mock-exams.html">Mock Exams</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="resources.html">Free Resources</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="book.html" class="cta-button">Book a Trial</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Strive for Success with ExamTeq</h1>
+      <p>Expert-led tutoring for 11+, KS2, and GCSE. Mock exams, topic tests, and online video learning—designed for future-ready students.</p>
+      <div class="hero-buttons">
+        <a href="book.html" class="hero-cta">Book a Trial</a>
+        <a href="#services" class="hero-cta secondary">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section id="services" class="services">
+    <h2>Our Core Programmes</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>11+ Paper Class</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#subjects">Subjects</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="book.html">Book Paper Class</a></li>
+          <li>Weekly timed papers</li>
+          <li>Grammar school prep</li>
+          <li>Live feedback</li>
         </ul>
-      </nav>
+      </div>
+      <div class="service-card">
+        <h3>English Mastery (KS2)</h3>
+        <ul>
+          <li>Comprehension & grammar</li>
+          <li>Creative writing support</li>
+          <li>11+ aligned curriculum</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Maths Mastery (KS2)</h3>
+        <ul>
+          <li>Mental maths & reasoning</li>
+          <li>Speed practice & tracking</li>
+          <li>Targeted Year 3–6 content</li>
+        </ul>
+      </div>
     </div>
-  </header>
-
-  <section id="home" class="hero">
-    <div class="container">
-      <h2>Master the Technique. Excel in Exams.</h2>
-      <p>Trusted by families since 2014. 11+ specialists and expanding into KS3–KS4 subjects.</p>
-    </div>
-  </section>
-
-  <section id="subjects">
-    <div class="container">
-      <h2>Our Subjects</h2>
-      <ul>
-        <li><strong>11+ Preparation</strong>: Verbal & Non-Verbal Reasoning, Maths, English</li>
-        <li><strong>Year 3–6</strong>: English and Maths</li>
-        <li><strong>Coming Soon</strong>: Year 7–11 Sciences & Economics</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <h2>About ExamTeq</h2>
-      <p>Founded in 2014, ExamTeq has delivered high-quality 11+ tutoring for over 11 years. We are expanding into new areas including KS2 core subjects and KS3–KS4 Science and Economics. Our goal is to make education accessible, affordable, and effective — online and in person.</p>
+    <div class="cta-link">
+      <a href="secondary.html" class="cta-button">See Secondary Programmes</a>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:info@examteq.com">info@examteq.com</a></p>
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+  <!-- Topic Tests -->
+  <section class="highlight">
+    <h2>Topic Tests & Video Tutorials</h2>
+    <p>Purchase focused topic tests with smart-marking and get access to guided videos as a member. Build mastery, one skill at a time.</p>
+    <a href="topic-tests.html" class="cta-button">Explore Topic Tests</a>
+  </section>
+
+  <!-- Mock Exams -->
+  <section class="services">
+    <h2>Upcoming Mock Exams</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>11+ Mock Paper 1</h3>
+        <p>August 3, 2025 – Online & In-Centre</p>
+      </div>
+      <div class="service-card">
+        <h3>11+ Mock Paper 2</h3>
+        <p>August 17, 2025 – Timed Conditions</p>
+      </div>
+      <div class="service-card">
+        <h3>KS2 Progress Test</h3>
+        <p>Book anytime – Marked with feedback</p>
+      </div>
     </div>
+    <a href="mock-exams.html" class="cta-button">View All Mock Exams</a>
+  </section>
+
+  <!-- Free Resources -->
+  <section class="cta-strip">
+    <h2>Free Learning Resources</h2>
+    <p>Watch ExamTeq’s YouTube lessons and download revision sheets, all 100% free.</p>
+    <a href="resources.html" class="cta-button">Visit Resource Hub</a>
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 ExamTeq. All rights reserved.</p>
+  <footer style="background: var(--footer-bg); color: var(--footer-text); font-size: 0.8rem;">
+  <div style="max-width: 1100px; margin: 0 auto; padding: 10px 15px 5px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;">
+
+    <div style="flex: 1; min-width: 180px;">
+      <h3 style="margin: 0 0 4px; font-size: 0.95rem; color: #fff;">About</h3>
+      <p style="margin: 0;">Premium tutoring since 2014 – helping students master exams through structured learning.</p>
     </div>
-  </footer>
+
+    <div style="flex: 1; min-width: 140px;">
+      <h3 style="margin: 0 0 4px; font-size: 0.95rem; color: #fff;">Links</h3>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="mock-exams.html">Mocks</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+
+    <div style="flex: 1; min-width: 160px;">
+      <h3 style="margin: 0 0 4px; font-size: 0.95rem; color: #fff;">Contact</h3>
+      <p style="margin: 0;">info@examteq.com<br>+44 1234 567890<br>London, UK</p>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; padding: 8px 0; background: #111; color: #aaa; font-size: 0.75rem;">
+    &copy; 2025 ExamTeq. All rights reserved.
+  </div>
+</footer>
+
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('active');
+  }
+
+  // Optional: Close menu after clicking a link
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("active");
+      });
+    });
+  });
+</script>
+
 </body>
 </html>

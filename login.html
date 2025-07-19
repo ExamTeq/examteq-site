@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Login to your ExamTeq member account and access topic tests and videos." />
+  <title>Login | ExamTeq</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCb7OZqJ6eLJYgX8j9Ya6x5oTXKX-opBvE",
+      authDomain: "examteq-bd7d4.firebaseapp.com",
+      projectId: "examteq-bd7d4",
+      storageBucket: "examteq-bd7d4.firebasestorage.app",
+      messagingSenderId: "577261003258",
+      appId: "1:577261003258:web:1e8c276833b974a9b24443"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    window.login = async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const errorDiv = document.getElementById('error');
+
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        window.location.href = 'members.html';
+      } catch (err) {
+        errorDiv.textContent = "Login failed: " + err.message;
+      }
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <!-- Your navbar -->
+  </header>
+
+  <main class="form-section">
+    <h1>Member Login</h1>
+    <p>Access your exclusive resources and topic tests.</p>
+    <form onsubmit="login(event)">
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required />
+
+      <div id="error" style="color: red; font-size: 0.9rem;"></div>
+
+      <button type="submit" class="cta-button">Login</button>
+    </form>
+
+    <p style="margin-top: 1rem; text-align: center;">
+      New to ExamTeq? <a href="signup.html">Create an Account</a>
+    </p>
+  </main>
+
+  <footer>
+    <!-- Your footer here -->
+  </footer>
+</body>
+</html>
